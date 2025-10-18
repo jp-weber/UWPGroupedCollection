@@ -7,6 +7,7 @@ using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
+using WinRT;
 
 namespace UWPGroupedCollection
 {
@@ -27,6 +28,7 @@ namespace UWPGroupedCollection
         }
 
         /// <inheritdoc/>
+        [DynamicWindowsRuntimeCast(typeof(Frame))]
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
             // Do not repeat app initialization when the Window already has content,
